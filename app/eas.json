@@ -1,16 +1,26 @@
 {
   "cli": {
-    "version": ">= 5.1.0"
+    "version": ">= 5.1.0",
+    "requireCommit": true
   },
   "build": {
     "development": {
       "developmentClient": true,
       "distribution": "internal"
     },
-    "preview": {
-      "distribution": "internal"
+    "production": {
+      "node": "20.8.0",
+      "env": {
+        "EXPO_PUBLIC_MAPBOX_TOKEN": "pk.eyJ1IjoicHJha2hhcmEiLCJhIjoiY2xuZnY5NHU0MDIzZjJsbzcwYmtlbjJ6NiJ9.SebJBm-yP5rEcQdCVfFOLg"
+      }
     },
-    "production": {}
+    "preview": {
+      "distribution": "internal",
+      "extends": "production",
+      "env": {
+        "EXPO_PUBLIC_MAPBOX_TOKEN": "pk.eyJ1IjoicHJha2hhcmEiLCJhIjoiY2xuZnY5NHU0MDIzZjJsbzcwYmtlbjJ6NiJ9.SebJBm-yP5rEcQdCVfFOLg"
+      }
+    }
   },
   "submit": {
     "production": {}

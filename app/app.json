@@ -27,11 +27,16 @@
         "origin": false
       },
       "eas": {
-        "projectId": "e4017851-fabe-40df-921e-613b86d7177c"
+        "projectId": "1253f9b1-a1df-488a-8e40-defce8633308"
       }
     },
     "android": {
-      "package": "com.travelplanner.app"
+      "package": "com.travelplanner.app",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ]
     },
     "ios": {
       "bundleIdentifier": "com.travelplanner.app"
